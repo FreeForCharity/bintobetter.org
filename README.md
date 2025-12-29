@@ -1,24 +1,24 @@
-# Free For Charity Website
+# BinToBetter Website
 
 ## 📄 Pure HTML Static Website
 
-This repository contains the **Free For Charity** website built with pure HTML, CSS, and JavaScript - no build process required!
+This repository contains the **BinToBetter** website built with pure HTML, CSS, and JavaScript - no build process required!
 
 ### Quick Links
 
-- 🌐 **[Live Site](https://ffcworkingsite2.org/)** - Production website
+- 🌐 **[Live Site](https://bintobetter.org/)** - Production website
 - 📂 **[HTML Site Files](./html-site/)** - All website files
-- 🔄 **[Conversion History](./HTML_CONVERSION_SUMMARY.md)** - Documentation of React to HTML conversion
+- ♻️ **[GitHub Repository](https://github.com/FreeForCharity/bintobetter.org)** - Source code
 
 ---
 
 ## Organization
 
-**Free For Charity** is a 501(c)(3) nonprofit organization (EIN: 46-2471893) dedicated to supporting other nonprofits.
+**BinToBetter** is a youth-led nonprofit organization dedicated to reducing community waste and promoting environmental sustainability.
 
-**Mission**: Free For Charity connects students, professionals, and businesses with nonprofits to reduce operating costs and increase impact. By providing free web hosting, domain names, Microsoft 365 grants assistance, and consulting services, we help nonprofits put more resources back into their charitable missions.
+**Mission**: BinToBetter transforms used tennis balls, e-waste, and hard-to-recycle plastics into valuable tools for schools, seniors, and students. Through hands-on recycling initiatives and educational workshops, we demonstrate that waste reduction isn't just possible—it's powerful.
 
-**Primary Contact**: Clarke Moyer ([@clarkemoyer](https://github.com/clarkemoyer)) - clarkemoyer@freeforcharity.org
+**Primary Contact**: info@bintobetter.org
 
 ---
 
@@ -37,17 +37,14 @@ html-site/                      # Production website (deployed to GitHub Pages)
 ├── privacy-policy.html        # Privacy policy page
 ├── cookie-policy.html         # Cookie policy page
 ├── terms-of-service.html      # Terms of service page
-├── donation-policy.html       # Donation policy page
-├── free-for-charity-donation-policy.html
-├── vulnerability-disclosure-policy.html
-├── security-acknowledgements.html
+├── CNAME                      # Custom domain configuration (bintobetter.org)
 └── *.png, *.ico, *.webmanifest # Icons and manifest files
 
 tests/                         # Playwright E2E tests for HTML site
 ├── *.spec.ts                 # Test files
 └── README.md                  # Testing documentation
 
-docs-backup/                   # Archived documentation from React/Next.js version
+docs-backup/                   # Archived documentation
 └── *.md                       # Historical reference files
 ```
 
@@ -57,14 +54,16 @@ docs-backup/                   # Archived documentation from React/Next.js versi
 
 ### Homepage Sections
 - **Hero Section** - Welcome message with call-to-action buttons
-- **Mission Section** - Mission statement with video
-- **Results 2023** - Impact numbers with animated counters
-- **Volunteer Section** - Call to action for volunteers
-- **Events Section** - Facebook Events integration
-- **Donate Section** - Zeffy donation form
-- **Programs Section** - Free hosting, domains, consulting
-- **FAQ Section** - Accordion-style questions
-- **Team Section** - Team member cards
+- **Mission Section** - Mission statement about waste reduction and youth empowerment
+- **Our Impact** - Impact numbers with animated counters (tennis balls repurposed, e-waste recycled, etc.)
+- **Community Impact** - Testimonials from schools and community partners
+- **Volunteer Section** - Call to action for youth volunteers
+- **Events Section** - Community events and collection drives
+- **Donate Section** - Support our recycling programs
+- **Why It Matters** - Environmental impact, community benefits, youth leadership
+- **Programs Section** - Tennis ball recycling, e-waste workshops, plastic repurposing
+- **FAQ Section** - Accordion-style questions about our recycling programs
+- **Team Section** - Youth leaders and volunteers
 
 ### Navigation & Layout
 - **Sticky Header** - Navigation with mobile hamburger menu
@@ -78,10 +77,6 @@ All legal and policy information is available on separate pages:
 - Privacy Policy
 - Cookie Policy
 - Terms of Service
-- Donation Policy
-- Free For Charity Donation Policy
-- Vulnerability Disclosure Policy
-- Security Acknowledgements
 
 ---
 
@@ -89,31 +84,31 @@ All legal and policy information is available on separate pages:
 
 The site is automatically deployed to the custom apex domain when changes are pushed to the `main` branch.
 
-- **Production URL**: https://ffcworkingsite2.org/
+- **Production URL**: https://bintobetter.org/
 - **Deployment**: Via GitHub Actions (`.github/workflows/deploy.yml`) to GitHub Pages with custom domain
 - **Custom Domain**: Configured via `CNAME` file in `html-site/` directory
 - **No Build Step**: Pure HTML files are served directly from the `html-site/` directory
 
 ### ⚠️ Custom Domain Dependency
 
-**Important**: This site has a critical dependency on the custom domain (ffcworkingsite2.org). All asset paths are root-relative (e.g., `/css/styles.css`, `/images/`), which requires the site to be served from a domain root.
+**Important**: This site has a critical dependency on the custom domain (bintobetter.org). All asset paths are root-relative (e.g., `/css/styles.css`, `/images/`), which requires the site to be served from a domain root.
 
 **Implications**:
-- The site will **NOT** work if accessed via the GitHub Pages subpath URL (https://freeforcharity.github.io/FFC-IN-Single_Page_Template_HTML/)
+- The site will **NOT** work if accessed via the GitHub Pages subpath URL (https://freeforcharity.github.io/bintobetter.org/)
 - The `CNAME` file in `html-site/` is critical for proper deployment
 - If the custom domain expires, becomes misconfigured, or is removed, the site will be broken
 
 **Operational Requirements**:
-1. **Domain Renewal**: Ensure ffcworkingsite2.org domain renewal is monitored and automated
+1. **Domain Renewal**: Ensure bintobetter.org domain renewal is monitored and automated
 2. **CNAME File**: Never remove or modify the `html-site/CNAME` file without updating asset paths
 3. **Monitoring**: Set up alerts for domain expiration and SSL certificate renewal
 
 **Contingency Plan**:
 If the custom domain becomes unavailable and the site needs to work on the GitHub Pages URL, you must:
 1. Restore the basePath prefix to all asset paths (revert to the commit before basePath removal, or manually add the prefix)
-2. Update all `/css/` → `/FFC-IN-Single_Page_Template_HTML/css/`
-3. Update all `/images/` → `/FFC-IN-Single_Page_Template_HTML/images/`
-4. Update all navigation `/#section` → `/FFC-IN-Single_Page_Template_HTML/#section`
+2. Update all `/css/` → `/bintobetter.org/css/`
+3. Update all `/images/` → `/bintobetter.org/images/`
+4. Update all navigation `/#section` → `/bintobetter.org/#section`
 
 ---
 
@@ -123,8 +118,8 @@ No build process or dependencies required! Simply open the HTML files in your br
 
 ```bash
 # Clone the repository
-git clone https://github.com/FreeForCharity/FFC-IN-Single_Page_Template_HTML.git
-cd FFC-IN-Single_Page_Template_HTML
+git clone https://github.com/FreeForCharity/bintobetter.org.git
+cd bintobetter.org
 
 # Open in browser
 cd html-site
@@ -243,7 +238,4 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](./LICE
 
 ## Historical Context
 
-This repository originally contained a React/Next.js application that was converted to pure HTML/CSS/JavaScript. For details on the conversion process and what was changed, see:
-- [HTML Conversion Summary](./HTML_CONVERSION_SUMMARY.md)
-- [HTML Conversion Assessment](./HTML_CONVERSION_ASSESSMENT.md)
-- [HTML Conversion Verification](./HTML_CONVERSION_VERIFICATION.md)
+This repository was created using the Free For Charity website template and converted to serve the BinToBetter nonprofit organization. The template provides a professional, accessible, and performant static HTML website structure that was adapted for BinToBetter's mission of waste reduction and environmental sustainability.
