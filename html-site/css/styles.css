@@ -861,6 +861,31 @@ h6 {
   border-radius: 8px;
 }
 
+/* Events placeholder styles */
+.events-placeholder {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.events-cta-content {
+  max-width: 600px;
+}
+
+.events-cta-title {
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.events-cta-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
 .events-link {
   text-align: center;
   margin-top: 30px;
@@ -949,6 +974,33 @@ h6 {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+}
+
+/* Donation contact wrapper styles */
+.donate-contact-wrapper {
+  min-height: 400px;
+  height: auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.donate-contact-title {
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.donate-contact-text {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.donate-contact-btn {
+  margin-top: 20px;
 }
 
 @media (min-width: 1024px) {
@@ -1928,12 +1980,14 @@ h6 {
 /* ========================================
    Endowment Features Section
    ======================================== */
-.endowment-section {
+.endowment-section,
+.impact-section {
   padding: 60px 20px 30px;
   background-color: #fff;
 }
 
-.endowment-section .section-title {
+.endowment-section .section-title,
+.impact-section .section-title {
   font-size: 48px;
   font-weight: 400;
   line-height: 1;
@@ -2007,7 +2061,8 @@ h6 {
 
 /* Responsive Endowment */
 @media (max-width: 768px) {
-  .endowment-section .section-title {
+  .endowment-section .section-title,
+  .impact-section .section-title {
     font-size: 32px;
   }
 
