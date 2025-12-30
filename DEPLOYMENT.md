@@ -162,7 +162,9 @@ If you want to use a custom domain:
 
    **CRITICAL: CNAME File Location**
    - `html-site/CNAME` - **ONLY location for CNAME** (deployed to GitHub Pages)
-   - **DO NOT** create a CNAME file at the repository root - this causes deployment issues
+   - **DO NOT** create a CNAME file at the repository root
+   
+   **Why?** When GitHub Pages deploys, it serves files from the uploaded artifact directory. A CNAME at the repository root causes GitHub to serve root-level files (like README.md) instead of the deployed artifact content. The CNAME must be inside the `html-site/` directory so it gets included in the deployment artifact.
 
    The file should contain:
 
@@ -195,8 +197,8 @@ If you want to use a custom domain:
    - The `html-site/CNAME` file is critical for deployment
    - Without this file, GitHub Pages loses custom domain configuration on each deployment
    - The deployment workflow deploys `html-site/` directory only
-   - **Never create a CNAME file at the repository root** - it conflicts with the deployment
    - Custom domain works independently of the basePath configuration
+   - See note above about CNAME file location requirements
 
 ### DNS Propagation
 
