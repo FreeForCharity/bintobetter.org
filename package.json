@@ -1,8 +1,8 @@
 {
-  "name": "free-for-charity-html",
-  "version": "0.1.0",
+  "name": "bintobetter-website",
+  "version": "1.0.0",
   "private": true,
-  "description": "Free For Charity HTML static website with Playwright E2E tests",
+  "description": "BinToBetter HTML static website with Playwright E2E tests",
   "scripts": {
     "preview": "npx serve -s html-site -l 8000",
     "test": "playwright test",

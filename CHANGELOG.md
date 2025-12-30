@@ -1,14 +1,31 @@
 # Changelog
 
-All notable changes to the Free For Charity Website Template will be documented in this file.
+All notable changes to the BinToBetter website will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-### Added
+## [1.0.0] - 2025-12-30
 
+### Changed
+
+- Updated package.json to reflect BinToBetter project name and description
+- Updated CITATION.cff to reference BinToBetter organization and mission
+- Updated version to 1.0.0 to reflect production-ready status
+
+### Repository History
+
+This repository was created using the Free For Charity website template and converted to serve the BinToBetter nonprofit organization. The template provided a professional, accessible, and performant static HTML website structure that was adapted for BinToBetter's mission of waste reduction and environmental sustainability.
+
+**BinToBetter** is a youth-led nonprofit organization that transforms used tennis balls, e-waste, and hard-to-recycle plastics into valuable tools for schools, seniors, and students through hands-on recycling initiatives and educational workshops.
+
+## [0.1.0] - 2025-12-11
+
+### Added (Template Features)
+
+- Pure HTML static website structure (converted from Next.js template)
 - Community health files for better GitHub integration
   - SUPPORT.md for support resources
   - .github/FUNDING.yml for sponsorship information
@@ -21,32 +38,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - CITATION.cff for academic citation
   - CHANGELOG.md for release tracking
   - COMMUNITY_HEALTH_FILES.md for community health documentation
-
-## [0.1.0] - 2025-12-11
-
-### Added
-
-- Initial release of Free For Charity Website Template
-- Next.js 16.0.7 single-page application with App Router
-- TypeScript implementation throughout
-- Tailwind CSS for styling
-- Global popup system for donations and volunteer applications
-- Mobile-responsive navigation with hamburger menu
-- Static export configuration for GitHub Pages deployment
 - Comprehensive testing suite (Playwright E2E tests)
+- Mobile-responsive navigation with hamburger menu
 - Accessibility features and WCAG compliance
-- SEO optimization with metadata, sitemap, and robots.txt
+- SEO optimization with metadata
 - Cookie consent banner with preferences
-- Google Tag Manager integration for analytics
-- Multiple policy pages (Privacy, Terms, Security, etc.)
-- Team member showcase with modal details
+- Multiple policy pages (Privacy, Cookie, Terms of Service)
+- Team member showcase
 - FAQ section with accordion UI
-- Testimonials carousel
-- Programs and impact sections
+- Impact numbers and testimonials
+- Programs and events sections
 - CNCF-compliant project governance
 - Security features:
-  - Branch protection rules
-  - Signed commits requirement
   - CodeQL security scanning
   - Dependabot for dependency updates
   - Vulnerability disclosure policy
@@ -58,30 +61,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - GOVERNANCE.md for project leadership
   - MAINTAINERS.md listing project maintainers
   - THREAT-MODEL.md for security analysis
-  - TESTING.md for test documentation
   - DEPLOYMENT.md for deployment instructions
-  - QUICK_START.md for rapid onboarding
   - Multiple technical guides and documentation
 
 ### Technical Stack
 
-- Next.js 16.0.7
-- React 19
-- TypeScript 5.7.2
-- Tailwind CSS 3.4.17
+- Pure HTML, CSS, and JavaScript
 - Playwright for E2E testing
-- ESLint for code quality
-- Prettier for code formatting
-- Husky for git hooks
-- Conventional commits enforcement
+- GitHub Pages deployment with custom domain (bintobetter.org)
 
 ### Infrastructure
 
 - GitHub Pages deployment
 - GitHub Actions CI/CD
-- Lighthouse performance monitoring
 - Automated testing in CI
-- Merge queue verification
 
-[unreleased]: https://github.com/FreeForCharity/FFC_Single_Page_Template/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/FreeForCharity/FFC_Single_Page_Template/releases/tag/v0.1.0
+[unreleased]: https://github.com/FreeForCharity/bintobetter.org/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/FreeForCharity/bintobetter.org/releases/tag/v1.0.0
+[0.1.0]: https://github.com/FreeForCharity/bintobetter.org/releases/tag/v0.1.0

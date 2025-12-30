@@ -2,36 +2,36 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: Free For Charity Website Template
+title: BinToBetter Website
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
 type: software
 authors:
-  - given-names: Clarke
-    family-names: Moyer
-    email: clarkemoyer@freeforcharity.org
-    affiliation: Free For Charity
-repository-code: 'https://github.com/FreeForCharity/FFC_Single_Page_Template'
-url: 'https://ffcworkingsite1.org'
+  - name: BinToBetter Team
+    email: info@bintobetter.org
+    affiliation: BinToBetter
+repository-code: 'https://github.com/FreeForCharity/bintobetter.org'
+url: 'https://bintobetter.org'
 abstract: >-
-  Single-page Next.js 16.0.7 website template built with App
-  Router for Free For Charity nonprofit organization. This
-  template provides a professional, accessible, and
-  performant foundation for nonprofit websites, featuring
-  global popups for donations and volunteer applications,
-  comprehensive testing, and GitHub Pages deployment
-  support.
+  Pure HTML static website for BinToBetter, a youth-led nonprofit
+  organization dedicated to reducing community waste and promoting
+  environmental sustainability. BinToBetter transforms used tennis
+  balls, e-waste, and hard-to-recycle plastics into valuable tools
+  for schools, seniors, and students. Built using the Free For Charity
+  website template and adapted for BinToBetter's mission.
 keywords:
   - nonprofit
   - charity
-  - nextjs
-  - website-template
-  - 501c3
-  - typescript
-  - tailwindcss
-  - accessibility
+  - environmental-sustainability
+  - waste-reduction
+  - recycling
+  - youth-led
+  - tennis-balls
+  - e-waste
+  - static-website
+  - html
   - open-source
 license: Apache-2.0
-version: 0.1.0
-date-released: '2025-12-11'
+version: 1.0.0
+date-released: '2025-12-30'
