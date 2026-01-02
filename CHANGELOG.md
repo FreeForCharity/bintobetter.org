@@ -23,7 +23,7 @@ This repository was created using the Free For Charity website template and conv
 
 ## [0.1.0] - 2025-12-11
 
-### Added (Template Features)
+### Inherited from Template
 
 - Pure HTML static website structure (converted from Next.js template)
 - Community health files for better GitHub integration
