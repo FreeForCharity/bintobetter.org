@@ -215,8 +215,8 @@ To prevent this issue in the future:
 ## Related Documentation
 
 - [DEPLOYMENT.md](./DEPLOYMENT.md) - Full deployment documentation
-- [GITHUB_PAGES_FIX.md](./GITHUB_PAGES_FIX.md) - Previous CNAME-related fix
-- [CLOUDFLARE_SETUP.md](./CLOUDFLARE_SETUP.md) - Cloudflare configuration
+- [GITHUB_PAGES_FIX.md](./GITHUB_PAGES_FIX.md) - **Note:** This addresses a *different* issue (README being served instead of website). The current 404 error is a separate issue where GitHub Pages is not deployed at all.
+- [CLOUDFLARE_SETUP.md](./CLOUDFLARE_SETUP.md) - Cloudflare configuration (includes DNS setup for GitHub Pages)
 - [GitHub Pages Docs](https://docs.github.com/en/pages) - Official documentation
 
 ---

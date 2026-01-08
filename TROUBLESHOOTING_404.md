@@ -478,6 +478,6 @@ To prevent this issue from recurring:
 ## Related Documentation
 
 - `DEPLOYMENT.md` - Full deployment guide and configuration
-- `GITHUB_PAGES_FIX.md` - Previous fix for similar CNAME issue
-- `CLOUDFLARE_SETUP.md` - Cloudflare configuration for performance
+- `GITHUB_PAGES_FIX.md` - **Different issue:** Fix for when README.md is served instead of website (caused by root CNAME file). The current 404 issue is different - the site isn't deployed at all.
+- `CLOUDFLARE_SETUP.md` - Cloudflare configuration for performance (includes GitHub Pages DNS setup)
 - `SUPPORT.md` - How to get help
