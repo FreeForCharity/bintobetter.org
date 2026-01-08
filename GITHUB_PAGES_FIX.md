@@ -1,6 +1,19 @@
 # GitHub Pages Deployment Fix
 
-## Issue Description
+## Latest Update (January 2026)
+
+**New Feature**: The site now supports dual deployment to both custom domain and GitHub Pages subdirectory.
+
+See [GITHUB_PAGES_DUAL_DEPLOYMENT.md](./GITHUB_PAGES_DUAL_DEPLOYMENT.md) for details on:
+- BasePath detection for GitHub Pages subdirectory support
+- How the site works with both `https://bintobetter.org` and `https://freeforcharity.github.io/FFC-EX-bintobetter.org/`
+- Testing and maintenance procedures
+
+---
+
+## Previous Issue: README Being Served (December 2025)
+
+### Issue Description
 
 When navigating to `https://bintobetter.org`, users were seeing the rendered README.md file instead of the actual BinToBetter HTML website.
 

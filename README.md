@@ -84,30 +84,41 @@ All legal and policy information is available on separate pages:
 
 The site is automatically deployed to the custom apex domain when changes are pushed to the `main` branch.
 
-- **Production URL**: https://bintobetter.org/
-- **Deployment**: Via GitHub Actions (`.github/workflows/deploy.yml`) to GitHub Pages with custom domain
+- **Primary URL**: https://bintobetter.org/ (custom domain via CNAME)
+- **Fallback URL**: https://freeforcharity.github.io/FFC-EX-bintobetter.org/ (GitHub Pages subdirectory)
+- **Deployment**: Via GitHub Actions (`.github/workflows/deploy.yml`) to GitHub Pages
 - **Custom Domain**: Configured via `CNAME` file in `html-site/` directory
 - **No Build Step**: Pure HTML files are served directly from the `html-site/` directory
 
-### ⚠️ Custom Domain Dependency
+### ✅ Dual Deployment Support (NEW)
 
-**Important**: This site has a critical dependency on the custom domain (bintobetter.org). All asset paths are root-relative (e.g., `/css/styles.css`, `/images/`), which requires the site to be served from a domain root.
+**The site now works with BOTH deployment URLs!**
 
-**Implications**:
-- The site will **NOT** work if accessed via the GitHub Pages subpath URL (https://freeforcharity.github.io/bintobetter.org/)
-- The `CNAME` file in `html-site/` is critical for proper deployment
-- If the custom domain expires, becomes misconfigured, or is removed, the site will be broken
+The site includes automatic basePath detection that ensures proper functionality on:
+1. **Custom domain**: https://bintobetter.org (uses root paths like `/css/styles.css`)
+2. **GitHub Pages subdirectory**: https://freeforcharity.github.io/FFC-EX-bintobetter.org/ (automatically adds basePath)
+
+This means:
+- ✅ Site remains accessible even if custom domain DNS is not configured
+- ✅ No waiting for DNS propagation (24-48 hours)
+- ✅ Easier testing and development
+- ✅ Resilient to domain configuration issues
+
+**How it works**: An inline JavaScript in each HTML file detects the deployment environment and automatically injects a `<base>` tag for GitHub Pages subdirectory URLs. See [GITHUB_PAGES_DUAL_DEPLOYMENT.md](./GITHUB_PAGES_DUAL_DEPLOYMENT.md) for technical details.
+
+### Domain Configuration
 
 **Operational Requirements**:
 1. **Domain Renewal**: Ensure bintobetter.org domain renewal is monitored and automated
-2. **CNAME File**: Never remove or modify the `html-site/CNAME` file without updating asset paths
+2. **CNAME File**: The `html-site/CNAME` file must remain with content `bintobetter.org`
 3. **Monitoring**: Set up alerts for domain expiration and SSL certificate renewal
 
-**Contingency Plan**:
-If the custom domain becomes unavailable and the site needs to work on the GitHub Pages URL, you must:
-1. Restore the basePath prefix to all asset paths (revert to the commit before basePath removal, or manually add the prefix)
-2. Update all `/css/` → `/bintobetter.org/css/`
-3. Update all `/images/` → `/bintobetter.org/images/`
+**Fallback Access**:
+If the custom domain becomes unavailable, the site automatically works at:
+```
+https://freeforcharity.github.io/FFC-EX-bintobetter.org/
+```
+No code changes required!
 4. Update all navigation `/#section` → `/bintobetter.org/#section`
 
 ---
