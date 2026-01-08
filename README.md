@@ -89,6 +89,31 @@ The site is automatically deployed to the custom apex domain when changes are pu
 - **Custom Domain**: Configured via `CNAME` file in `html-site/` directory
 - **No Build Step**: Pure HTML files are served directly from the `html-site/` directory
 
+### 🔧 Troubleshooting 404 Errors
+
+If you see a **404 "Site not found - GitHub Pages"** error when visiting https://bintobetter.org/, this typically means GitHub Pages is not properly configured or deployed. Follow these steps:
+
+**Quick Fix:**
+
+1. **Verify GitHub Pages is enabled:**
+   - Go to **Settings** → **Pages**
+   - Source should be: **GitHub Actions**
+   - Custom domain should be: `bintobetter.org`
+
+2. **Trigger a deployment:**
+   - Go to **Actions** tab
+   - Click "Deploy to GitHub Pages" workflow
+   - Click **Run workflow** → select `main` branch → **Run workflow**
+
+3. **Wait and verify:**
+   - Wait 1-2 minutes for deployment to complete
+   - Visit https://bintobetter.org in incognito mode
+
+**For detailed troubleshooting:**
+- Run the verification script: `bash verify-deployment.sh`
+- See [TROUBLESHOOTING_404.md](./TROUBLESHOOTING_404.md) for comprehensive troubleshooting guide
+- See [DEPLOYMENT.md](./DEPLOYMENT.md) for full deployment documentation
+
 ### ⚠️ Custom Domain Dependency
 
 **Important**: This site has a critical dependency on the custom domain (bintobetter.org). All asset paths are root-relative (e.g., `/css/styles.css`, `/images/`), which requires the site to be served from a domain root.
